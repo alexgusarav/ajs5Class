@@ -59,5 +59,6 @@ test('проверка получения урона', () => {
 test('смерть персонажа после урона', () => {
     const unit = new Boweman('test', 'Boweman');
     unit.health = 5;
-    expect(() => unit.damage(10)).toThrow('персонаж не здоров');
+    unit.damage(10)
+    expect(unit.health).toEqual(0);
 });

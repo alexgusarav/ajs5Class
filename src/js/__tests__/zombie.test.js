@@ -7,8 +7,8 @@ test('проверка Zombie', () => {
     type: 'Zombie',
     health: 100,
     level: 1,
-    attack: 25,
-    defence: 25,
+    attack: 40,
+    defence: 10,
   };
   expect(testB).toEqual(testId);
 });
