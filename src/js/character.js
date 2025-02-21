@@ -1,20 +1,21 @@
+const typeBase = [
+  'Boweman',
+  'Swordsman',
+  'Magician',
+  'Daemon',
+  'Undead',
+  'Zombie',
+];
+
 export default class Character {
-    static typeBase = [
-      'Boweman',
-      'Swordsman',
-      'Magician',
-      'Daemon',
-      'Undead',
-      'Zombie',
-    ];
-  
+ 
     constructor(name, type) {
       if (typeof name === 'string' && name.length >= 2 && name.length <= 10) {
         this.name = name;
       } else {
         throw new Error("ошибка, имя должно быть строкой от 2 до 10 символов");
       }
-      if (Character.typeBase.includes(type)) {
+      if (typeBase.includes(type)) {
         this.type = type;
       } else {
         throw new Error('Выберете тип из: Boweman, Swordsman, Magician, Daemon, Undead, Zombie');
